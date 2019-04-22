@@ -40,7 +40,7 @@ public class ShiroRelam extends AuthorizingRealm {
         User user = userService.findByUserName(name);
         // 添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-        List<Role> roleList = roleService.findRoleByUserId(user.getId());
+        /*List<Role> roleList = roleService.findRoleByUserId(user.getId());*/
         return null;
     }
 
