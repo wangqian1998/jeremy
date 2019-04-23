@@ -15,7 +15,7 @@ import java.util.List;
  * @author chenjun on 2019/4/22
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/admin/user")
 public class UserController {
 
     @Autowired
@@ -29,9 +29,15 @@ public class UserController {
         return userService.findAll();
     }
 
-    @RequestMapping("/show")
+    @RequestMapping("/loginPage")
     public String show() {
         System.out.println("进来了跳转页面的方法");
         return "/user/index";
+    }
+
+    @RequestMapping("/test")
+    public String test() {
+        System.out.println("这是测试的方法");
+        return null;
     }
 }
