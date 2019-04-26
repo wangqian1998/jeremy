@@ -52,8 +52,10 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setUnauthorizedUrl("/admin/user/loginPage");
         Map<String, String> filterDefaultMap = new HashMap<>();
         filterDefaultMap.put("/logout", "logout");
-        filterDefaultMap.put("admin/user/login", "anon");
+        filterDefaultMap.put("/admin/user/login", "anon");
         filterDefaultMap.put("/static/**", "anon");
+      /*  filterDefaultMap.put("/**.js", "anon");
+        filterDefaultMap.put("/**.css", "anon");*/
         filterDefaultMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterDefaultMap);
         return shiroFilterFactoryBean;
