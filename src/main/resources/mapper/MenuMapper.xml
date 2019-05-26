@@ -30,7 +30,7 @@
       where ID = #{id,jdbcType=VARCHAR}
     </select>-->
 
-    <select id="findAll" resultType="com.jeremy.entity.Menu">
+    <select id="findAll" resultType="com.jeremy.entity.Menu" >
       select * from sys_Menu
   </select>
 
